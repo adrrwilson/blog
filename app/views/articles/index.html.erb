@@ -1,0 +1,22 @@
+<h1 align = "Center" > Welcome to Adrian's Blog</h1>
+
+So far, <%= Article.public_count %> articles have been written.
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+         </div>
+    <div class="article-body">
+     <%= truncate(article.body, length: 100) %>
+    </div>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Article", new_article_path %>
+
+<p>I invite you to check out my latest project <a href = "https://github.com/adrrwilson/Drinks" >Drinks</a> where I have compiled a list of 77 Cocktails. 
+You can input available ingredients to see which recipes are possible. Enjoy!</p>
+
+
