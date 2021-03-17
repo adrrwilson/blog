@@ -1,14 +1,20 @@
 <h1 align = "Center" > Welcome to Adrian's Blog</h1>
-
+ <style>
+  body{
+    font-family: Courier;
+    background-color: Salmon;
+  }
+</style>
 So far, <%= Article.public_count %> articles have been written.
 
 <ul>
   <% @articles.each do |article| %>
     <li>
+  
       <%= link_to article.title, article %>
          </div>
     <div class="article-body">
-     <%= truncate(article.body, length: 100) %>
+     <%= truncate(article.body, length: 75) %>
     </div>
     </li>
   <% end %>
